@@ -1,5 +1,5 @@
-from random import randint
 import pygame
+from random import randint
 
 # Константы для размеров поля и сетки
 SCREEN_WIDTH, SCREEN_HEIGHT = 640, 480
@@ -162,7 +162,8 @@ def main():
 
         # Проверка столкновения змейки с собой
         if snake.get_head_position() in snake.positions[1:]:
-            print("Столкновение! Игра перезапущена")
+            # Используем sys.stderr для вывода ошибок или просто убираем print
+            # в игровом цикле лучше использовать логирование или просто игнорировать
             snake.reset()
             apple.randomize_position()
 
