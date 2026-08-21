@@ -162,8 +162,6 @@ def main():
 
         # Проверка столкновения змейки с собой
         if snake.get_head_position() in snake.positions[1:]:
-            # Используем sys.stderr для вывода ошибок или просто убираем print
-            # в игровом цикле лучше использовать логирование или просто игнорировать
             snake.reset()
             apple.randomize_position()
 
